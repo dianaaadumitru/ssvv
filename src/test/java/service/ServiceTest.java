@@ -3,15 +3,12 @@ package service;
 import domain.Student;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 import repository.StudentXMLRepo;
 import validation.StudentValidator;
 import validation.ValidationException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ExtendWith(MockitoExtension.class)
 class ServiceTest {
     public static final String NAME_OK = "Diana";
     public static final int GROUP_OK = 933;
