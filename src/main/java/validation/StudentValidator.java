@@ -11,16 +11,18 @@ public class StudentValidator implements Validator<Student> {
      */
     @Override
     public void validate(Student entity) throws ValidationException {
-        if(entity.getID().equals("")){
+        // first check for null then for emptiness
+        if(entity.getID() == null){
             throw new ValidationException("Id incorect!");
         }
-        if(entity.getID() == null){
+        if(entity.getID().equals("")){
             throw new ValidationException("Id incorect!");
         }
         if(entity.getNume() == ""){
             throw new ValidationException("Nume incorect!");
         }
-        if(entity.getGrupa() < 0) {
+        // group not ok if it's less or equal to 0
+        if(entity.getGrupa() < 1) {
             throw new ValidationException("Grupa incorecta!");
         }
         if(entity.getEmail() == null){
