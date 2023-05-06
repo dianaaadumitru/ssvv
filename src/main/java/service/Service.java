@@ -246,8 +246,10 @@ public class Service {
      */
     private int calculeazaSPredare(LocalDate predare) {
         LocalDate startDate = Curent.getStartDate();
+        System.out.println(startDate);
         long days = DAYS.between(startDate, predare);
         double saptamanaPredare = Math.ceil((double)days/7);
+        System.out.println(saptamanaPredare);
         return (int)saptamanaPredare;
     }
 }
